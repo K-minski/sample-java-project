@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="bfdac5d8-daf5-4f46-954e-86b817ebef97" name="Sample REST Test Suite DockerVirt" disabled="true">
+  <con:settings id="3bd58c4a-bd20-4e5a-8d18-d1e355d066b5">
+    <con:setting id="bfdac5d8-daf5-4f46-954e-86b817ebef97fileName">Sample-REST-Test-Suite-DockerVirt</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="81a31274-a4de-4aef-a37f-c003d37bcc6d">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="e6ac59e6-e617-4c6b-8b1b-5524c237ac6d">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="test" path="/{param}/" id="7413307f-c8e3-4968-b9d3-d135388e7e7d">
+  <con:settings id="3be8be8d-9377-4327-9bd9-58969ef189e4">
+    <con:setting id="7413307f-c8e3-4968-b9d3-d135388e7e7dfileName">test</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>param</con:name>
+      <con:value>Path</con:value>
+      <con:style>TEMPLATE</con:style>
+      <con:default>Path</con:default>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="Method 1" id="70f89882-8675-46f4-adc3-be1f40707731" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:test="http://localhost/test">test:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="1b4825d3-4973-4ad7-8410-7bd9277931a1" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:8084</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://localhost/test</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="param" value="test"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>param</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

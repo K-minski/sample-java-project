@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="0afc3872-e25e-43cc-97dc-82efb0cf6c76" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="LoadUI Single Status Check Request" searchProperties="true" timeout="0">
+  <con:settings id="09a4e51a-1354-4e7d-82fc-c171ca83c2fc">
+    <con:setting id="0afc3872-e25e-43cc-97dc-82efb0cf6c76fileName">LoadUI-Single-Status-Check-Request</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="7e9fb7db-3489-4787-9671-33e646ce167f">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Ecommerce" resourcePath="/{param}/" methodName="Method 1" xsi:type="con:RestRequestStep">
+      <con:restRequest name="REST Request" id="1b4825d3-4973-4ad7-8410-7bd9277931a1" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:8084</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/test</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="d7f22bea-177a-427e-bf97-44abdfb8d94e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="param" value="test"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>param</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
